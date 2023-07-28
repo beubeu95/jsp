@@ -26,7 +26,10 @@
   <hr>
   <p>이름 : <%=getName() %></p>
   <p>주소 : <%=addr %></p>
-  <a href="test01.jsp">테스트1</a>
+  <a href="test01.jsp">테스트1</a><br>
+  <a href="test02.jsp">로그인 양식</a><br>
+  <a href="test03.jsp">설문조사</a><br>
+  <a href="test04.jsp">헤더 정보</a><br>
   </body>
   </html>
 </DOCTYPE>
