@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자료조사</title>
+    <title>Title</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -12,15 +12,17 @@
 </head>
 <body>
 <div class="container">
-    <form action="request.jsp" class="frm" method="post">
+    <h2 class="title">설문조사</h2>
+    <form action="research.jsp" class="frm" method="post">
         <table class="table" id="tb1">
+            <tbody>
             <tr>
-                <th><label for="id">아이디</label> </th>
+                <th><label for="id">아이디</label></th>
                 <td><input type="text" name="id" id="id" required autofocus></td>
             </tr>
             <tr>
-                <th><label for ="year">출생년도</label></th>
-                <td><input type="number" name="year" id="year" min="1970" max="2023" value="1998" step="1" required></td>
+                <th><label for="year">출생년도</label></th>
+                <td><input type="number" name="year" id="year" min="1970" max="2023" step="1" value="1998" required></td>
             </tr>
             <tr>
                 <th><label for="name">이름</label></th>
@@ -29,10 +31,10 @@
             <tr>
                 <th><label>좋아하는 동물</label></th>
                 <td>
-                    <input type="checkbox" name="pet" id="pet1" value="강아지"><label for="pet1">강아지</label>
-                    <input type="checkbox" name="pet" id="pet2" value="고양이"><label for="pet2">고양이</label>
-                    <input type="checkbox" name="pet" id="pet3" value="송아지"><label for="pet3">송아지</label>
-                    <input type="checkbox" name="pet" id="pet4" value="수달"><label for="pet4">수달</label>
+                    <input type="checkbox" name="pet" value="dog" id="pet1" checked><label for="pet1">강아지</label><br>
+                    <input type="checkbox" name="pet" value="cat" id="pet2"><label for="pet2">고양이</label><br>
+                    <input type="checkbox" name="pet" value="cow" id="pet3"><label for="pet3">송아지</label><br>
+                    <input type="checkbox" name="pet" value="horse" id="pet4"><label for="pet4">망아지</label><br>
                 </td>
             </tr>
             <tr>
@@ -41,6 +43,7 @@
                     <input type="reset" value="취소" class="btn btn-primary">
                 </td>
             </tr>
+            </tbody>
         </table>
     </form>
 </div>
