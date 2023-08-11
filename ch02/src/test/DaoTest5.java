@@ -16,25 +16,26 @@ public class DaoTest5 {
     public static void main(String[] args) {
         DBC con = new MariaDBCon();
         conn = con.connect();
-        if(conn!=null){
+        if (conn != null) {
             System.out.println("DB 연결 성공");
-        Scanner sc = new Scanner(System.in);
-        System.out.println("강퇴할 회원의 아이디를 입력 : ");
-        String id = sc.nextLine();
-        int cnt =0;
-        try{
-            String sql = "delete member set where id=?";
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1,id);
-            cnt = pstmt.executeUpdate();
-            if(cnt>0) {
-                System.out.println("삭제 성공~!");
-            }else{
-                System.out.println("삭제 실패~!");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("강퇴할 회원의 아이디를 입력 : ");
+            String id = sc.nextLine();
+            int cnt = 0;
+            try {
+                String sql = "delete member set where id=?";
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, id);
+                cnt = pstmt.executeUpdate();
+                if (cnt > 0) {
+                    System.out.println("삭제 성공~!");
+                } else {
+                    System.out.println("삭제 실패~!");
                 }
                 con.close(pstmt, conn);
-            }catch(SQLException e){
-            System.out.println("SQL 구문이 처리되지 못했습니다.");
+            } catch (SQLException e) {
+                System.out.println("SQL 구문이 처리되지 못했습니다.");
+            }
         }
     }
 }
